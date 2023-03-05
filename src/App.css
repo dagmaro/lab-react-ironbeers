@@ -5,10 +5,12 @@
     background-repeat: no-repeat;
     background-size: 414px 896px;
     min-height: 100vh;
+    position: relative;
   }
 
   .home-page-links {
-    padding-top: 4rem;
+    position: absolute;
+    top: 4rem;
   }
 
   #beer-link {
@@ -58,6 +60,20 @@
   nav a p {
     color: gray;
     margin: 4px;
+  }
+
+  .header {
+    position: absolute;
+    top: 4rem;
+    width: 84.5%;
+    left: 2rem;
+    background-color: #3DC4FC;
+  }
+
+  .loader {
+    position: absolute;
+    top: 6rem;
+    left: 10rem;
   }
 
 }
