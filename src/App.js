@@ -5,7 +5,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import BeerLink from './pages/BeerLink';
 import Header from "./components/Header"
 import BeerDetails from './pages/BeerDetails';
-import { useState } from 'react';
+import RandomBeer from './pages/RandomBeer';
 
 function App() {
    
@@ -19,6 +19,7 @@ function App() {
       <Route path="/" element={ <Home />}/>
       <Route path="/beers" element={<BeerLink />} />
       <Route path="/beer-details/:id" element={<BeerDetails />}/>
+      <Route path="random-beer" element={<RandomBeer />}/>
     </Routes>
     </div>
   );
