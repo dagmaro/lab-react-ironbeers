@@ -27,17 +27,17 @@ function BeerDetails() {
   return (
     <div>
       {beerDetails ? (
-        <div>
+        <div className="beer-details">
           <img src={beerDetails.image_url} alt="beer-image" width="70px" />
           <h3>{beerDetails.name}</h3>
-          <p>{beerDetails.tagline}</p>
-          <b>{beerDetails.first_brewed}</b>
-          <p>{beerDetails.attenuation_level}</p>
-          <p>{beerDetails.description}</p>
-          <p>{beerDetails.contributed_by}</p>
+          <p className="gray-container">{beerDetails.tagline}</p>
+          <b className="b-container">{beerDetails.first_brewed}</b>
+          <p className="gray-container attenuation-container">{beerDetails.attenuation_level}</p>
+          <p className="description-container">{beerDetails.description}</p>
+          <p className="gray-container">{beerDetails.contributed_by}</p>
         </div>
       ) : (
-        <p>
+        <p className="loader">
           <MoonLoader />
         </p>
       )}

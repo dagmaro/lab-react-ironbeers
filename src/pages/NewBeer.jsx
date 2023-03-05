@@ -84,7 +84,7 @@ function NewBeer() {
   };
   return (
     <div>
-      <form>
+      <form className="form-container">
         <label htmlFor="name">Name </label>
         <input
           type="text"

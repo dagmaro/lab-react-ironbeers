@@ -112,8 +112,74 @@
     margin-right: 3.5rem;
   }
 
-  
+  /* SINGLE BEER DETAILS */
 
+  .beer-details {
+    position: absolute;
+    top: 10rem;
+    left: 2.5rem;
+    right: 2.5rem;
+    text-align: start;
+  }
+
+  .gray-container {
+    color: gray;
+  }
+
+  .description-container {
+    font-weight: bold;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .b-container {
+    position: absolute;
+    left: 260px;
+    top: 335px;
+  }
+
+  .attenuation-container {
+    position: absolute;
+    left: 300px;
+    top: 275px;
+  }
+
+  /* RANDOM BEER  */
+
+  .random-beer-container {
+    overflow-y: scroll;
+    max-height: 896px;
+  }
+
+  /* FROM  */
+
+  .form-container {
+    padding-top: 120px;
+  }
+
+  input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 120px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+  }
 }
 
 
