@@ -6,12 +6,13 @@ import BeerLink from './pages/BeerLink';
 import Header from "./components/Header"
 import BeerDetails from './pages/BeerDetails';
 import RandomBeer from './pages/RandomBeer';
+import NewBeer from './pages/NewBeer';
 
 function App() {
    
   const location = useLocation();
   const onHomePage = location.pathname === "/"
-  console.log(onHomePage);
+  // console.log(onHomePage);
   return (
     <div className="App">
     {!onHomePage && <Header />}
@@ -20,6 +21,7 @@ function App() {
       <Route path="/beers" element={<BeerLink />} />
       <Route path="/beer-details/:id" element={<BeerDetails />}/>
       <Route path="random-beer" element={<RandomBeer />}/>
+      <Route path="/new-beer" element={<NewBeer />}/>
     </Routes>
     </div>
   );
