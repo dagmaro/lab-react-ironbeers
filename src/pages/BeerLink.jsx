@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { MoonLoader } from "react-spinners";
-import BarLoader from "react-spinners/BarLoader";
 
 function BeerLink() {
   const [allBeersList, setAllBeersList] = useState(null);
@@ -18,7 +18,7 @@ function BeerLink() {
       );
       setAllBeersList(response.data);
       setIsLoading(false);
-      console.log(response);
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -26,22 +26,27 @@ function BeerLink() {
   if (isLoading === true) {
     return (
       <div className="loader">
-        <MoonLoader/>
+        <MoonLoader />
       </div>
     );
   }
   return (
-    <div>
+    <div className="all-beers-container">
       {allBeersList.map((eachBeer) => {
         return (
-          <div key={eachBeer._id}>
-            <img src={eachBeer.image_url} alt="beer-image" width="50px" />
-            <h3>{eachBeer.name}</h3>
-            <p>{eachBeer.tagline}</p>
-            <p>
-              {" "}
-              <b>{eachBeer.contributed_by}</b>{" "}
-            </p>
+          <div className="all-beers-item" key={eachBeer._id}>
+            <NavLink to={`/beer-details/${eachBeer._id}`}>
+              <img src={eachBeer.image_url} alt="beer-image" width="60px" />
+            </NavLink>
+            
+            <div className="info-beer">
+              <h3>{eachBeer.name}</h3>
+              <p>{eachBeer.tagline}</p>
+              <p>
+                Created by: <b>{eachBeer.contributed_by}</b>
+              </p>
+            </div>
+            <hr />
           </div>
         );
       })}

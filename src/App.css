@@ -8,6 +8,7 @@
     position: relative;
   }
 
+  /* HOME PAGE */
   .home-page-links {
     position: absolute;
     top: 4rem;
@@ -62,19 +63,56 @@
     margin: 4px;
   }
 
+  /* HEADER */
+
   .header {
     position: absolute;
     top: 4rem;
-    width: 84.5%;
+    width: 82%;
     left: 2rem;
     background-color: #3DC4FC;
+    padding: 5px;
   }
+
+  /* LOADER */
 
   .loader {
     position: absolute;
-    top: 6rem;
+    top: 9rem;
     left: 10rem;
   }
+
+  /* LIST OF ALL BEERS */
+
+  .all-beers-container {
+    position: relative;
+    overflow-y: scroll;
+    max-height: 896px;
+  }
+
+  .all-beers-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    text-align: start;
+    grid-column-gap: 0.5rem;
+    margin-right: 2rem;
+    align-items: center;
+    margin-bottom: -6.5rem;
+    margin-top: 7rem;
+    margin-left: 3rem;
+  }
+
+  .info-beer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .all-beers-item hr {
+    width: 500%;
+    margin-right: 3.5rem;
+  }
+
+  
 
 }
 
